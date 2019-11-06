@@ -22,11 +22,13 @@
 
   <dependencies>
   <!-- MySQL database driver -->
-	<dependency>
-   <groupId>com.oracle</groupId>
-<artifactId>ojdbc14</artifactId>
-<version>10.2.0</version>
+	<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
+<dependency>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc14</artifactId>
+    <version>10.2.0.3.0</version>
 </dependency>
+
 	<!-- Hibernate framework -->
 	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 <dependency>
