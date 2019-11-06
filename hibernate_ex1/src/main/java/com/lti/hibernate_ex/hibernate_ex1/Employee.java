@@ -10,6 +10,7 @@ public Employee(int id, String empName, String branch) {
 	this.empName = empName;
 	this.branch = branch;
 }
+public Employee(){}
 public int getId() {
 	return id;
 }
