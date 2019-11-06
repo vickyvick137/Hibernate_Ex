@@ -1,13 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>  
     <session-factory>  
-        <property name="connection.driver_class">oracle.jdbc.driver.Oracledriver</property>  
-        <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>  
-        <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>  
-        <property name="connection.username">system</property>  
-        <property name="connection.password">tiger</property> 
-        <property name="hbm2ddl.auto">create/update</property>   
-        <property name="connection.pool_size">1</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.Oracledriver</property>  
+        <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>  
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>  
+        <property name="hibernate.connection.username">system</property>  
+        <property name="hibernate.connection.password">tiger</property> 
+        <property name="hibernate.hbm2ddl.auto">create/update</property>   
+        <property name="hibernate.connection.pool_size">1</property>
  <!--    <mapping resource="employee.hbm.xml"/>  -->
     <mapping resource="com/lti/hibernate_ex/hibernate_ex1"/>
     </session-factory>  
