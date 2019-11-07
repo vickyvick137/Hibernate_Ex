@@ -10,10 +10,10 @@
   <name>newhibernate</name>
   <url>http://maven.apache.org</url>
 
+ 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
 <repositories>
     <repository>
     <id>codelds</id>
@@ -21,24 +21,36 @@
     </repository>
 </repositories>
 
-<dependencies>
-<dependency>
+  <dependencies>
+  <!-- MySQL database driver -->
+	 <dependency>
    <groupId>com.oracle</groupId>
 <artifactId>ojdbc14</artifactId>
 <version>10.2.0.3</version>
 </dependency>
-
+	<!-- Hibernate framework -->
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate-core</artifactId>
     <version>4.3.0.Final</version>
 </dependency>
 
-<dependency>
+	<!-- Hibernate library dependecy start -->
+	<dependency>
 		<groupId>dom4j</groupId>
 		<artifactId>dom4j</artifactId>
 		<version>1.6.1</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.jboss.logging/jboss-logging -->
+ <dependency>
+    <groupId>org.jboss.logging</groupId>
+    <artifactId>jboss-logging</artifactId>
+    <version>3.3.1.Final</version>
+</dependency>
+
+
+
 	<dependency>
 		<groupId>javax.transaction</groupId>
 		<artifactId>jta</artifactId>
@@ -56,12 +68,21 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    	
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
   </dependencies>
+  <build>
+<plugins>
+	<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+	<version>2.4</version>
+	<configuration>
+	  <archive>
+	    <manifest>
+		<mainClass>newhibernate_ex.newhibernate.App</mainClass>
+	    </manifest>
+	  </archive>
+	</configuration>
+    </plugin>
+    </plugins>
+</build>
 </project>
