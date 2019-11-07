@@ -12,7 +12,7 @@
         <property name="hibernate.hbm2ddl.auto">create</property>   
         <property name="hibernate.connection.pool_size">1</property>
  <!--    <mapping resource="employee.hbm.xml"/>  -->
-    <mapping resource="com/lti/hibernate_ex/hibernate_ex1/employee.hbm.xml"/>
+    <mapping resource="newhibernate_ex/newhibernate/employee.hbm.xml"/>
     </session-factory>  
   
 </hibernate-configuration>  
